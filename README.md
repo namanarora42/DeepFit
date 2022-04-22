@@ -133,9 +133,9 @@ Below is a training summary:
 
 
 # References
-- Hand Keypoint Detection in Single Images using Multiview Bootstrapping
+- Hand Keypoint Detection in Single Images using Multiview Bootstrapping  
 https://arxiv.org/abs/1704.07809
-- Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields
+- Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields  
 https://arxiv.org/pdf/1611.08050.pdf
 - Convolutional Pose Machines  
 https://arxiv.org/abs/1602.00134
