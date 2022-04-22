@@ -26,7 +26,8 @@ See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example.
 - We utilize the MMFit dataset to train a neural network to identify what exercise the person is performing. 
 - MMFit dataset is a collection of inertial sensor data from smartphones, smartwatches and earbuds worn by participants while performing full-body workouts, and time-synchronised multi-viewpoint RGB-D video, with 2D and 3D pose estimates. 
 - We make use of the 2D pose estimates present in MMFit.
-- The data is split into train, test, and valdiation sets. 
+- The data is split into train, test, and valdiation sets.
+- Since the dataset is large, it is not part of the repo. It can be downloaded [here](https://s3.eu-west-2.amazonaws.com/vradu.uk/mm-fit.zip).
 
 ## Training
 
@@ -147,3 +148,6 @@ https://google.github.io/mediapipe/
 https://github.com/tringn/2D-Keypoints-based-Pose-Classifier 
 - Classification of a two-dimensional pose using a human skeleton  
 https://doi.org/10.1051/matecconf/201713205016 
+- MMFit Dataset  
+https://github.com/KDMStromback/mm-fit  
+https://doi.org/10.1145/3432701 
