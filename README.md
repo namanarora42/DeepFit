@@ -66,7 +66,7 @@ See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example.
  'lateral_shoulder_raises': 9}
 ```
 
-- A sequential neural network with 3 hidden layes and a dropout of 0.5 is used. Below is a model summary: 
+- A sequential model with 2 hidden layes and a dropout of 0.5 is used to prevent overfitting. Below is a Keras model summary: 
 ``` 
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
