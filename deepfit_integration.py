@@ -157,16 +157,16 @@ def run_full_workout_motion(count, direction, form, elbow_angle, shoulder_angle,
                         count += 0.5
                         direction = 1
                 else:
-                    feedback = "Bad Form."
+                    feedback = "Feedback: Bad Form."
                     
             if pushup_success_percentage == 100:
                 if elbow_angle > 160 and shoulder_angle > 40 and hip_angle > 160:
-                    feedback = "Go Down"
+                    feedback = "Feedback: Go Down"
                     if direction == 1:
                         count += 0.5
                         direction = 0
                 else:
-                    feedback = "Bad Form."
+                    feedback = "Feedback: Bad Form."
             return [feedback, count]
 
 def draw_percentage_progress_bar(form, img, pushup_success_percentage, pushup_progress_bar):
@@ -185,12 +185,12 @@ def display_rep_count(count, img):
 def show_workout_feedback(feedback, img):    
     xf, yf = 85, 70
     cv2.putText(img, feedback, (xf, yf), cv2.FONT_HERSHEY_PLAIN, 2,
-                    (255, 255, 255), 2)
+                    (0,0,0), 2)
 
 def show_workout_name_from_model(img, workout_name_after_smoothening):
     xw, yw = 85, 40
     cv2.putText(img, workout_name_after_smoothening, (xw,yw), cv2.FONT_HERSHEY_PLAIN, 2,
-                    (255, 255, 255), 2)
+                    (0,0,0), 2)
 
 def check_form(elbow_angle, shoulder_angle, hip_angle, form, workout_name_after_smoothening):
     if workout_name_after_smoothening == "pushups":
@@ -272,8 +272,8 @@ def main():
             # Transparent Overlay
             overlay = img.copy()
             x, y, w, h = 75, 10, 500, 150
-            cv2.rectangle(img, (x, y), (x+w, y+h), (0, 0, 0), -1)      
-            alpha = 0.4  # Transparency factor.
+            cv2.rectangle(img, (x, y), (x+w, y+h), (255,255,255), -1)      
+            alpha = 0.8  # Transparency factor.
             # Following line overlays transparent rectangle over the image
             image_new = cv2.addWeighted(overlay, alpha, img, 1 - alpha, 0)          
             
