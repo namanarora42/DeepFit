@@ -6,7 +6,7 @@ Deepfit can be used to track your body movements throughout a workout. It will h
 
 # Wrapper
 
-We have implemented a wrapper around the Pose Detection API from Google's AI framework, MediaPipe to acheieve two tasks:
+We have implemented a wrapper around the Pose Detection API from Google's AI framework, MediaPipe, to achieve two tasks:
 
 1. To detect the coordinates of 18 keypoints (out of a total of 33) on the body of a single subject in frame. These keypoints are then fed into our Classifier model, which predicts the workout being performed based on these coordinates. 
 	
