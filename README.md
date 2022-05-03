@@ -8,9 +8,9 @@ Deepfit can be used to track your body movements throughout a workout. It will h
 
 We have implemented a wrapper around the Pose Detection API from Google's AI framework, MediaPipe to acheieve two tasks:
 
-	1. To detect the coordinates of 18 keypoints (out of a total of 33) on the body of a single subject in frame. These keypoints are then fed into our Classifier model, which predicts the workout being performed based on these coordinates. 
+1. To detect the coordinates of 18 keypoints (out of a total of 33) on the body of a single subject in frame. These keypoints are then fed into our Classifier model, which predicts the workout being performed based on these coordinates. 
 	
-	2. Once the workout has been identified by our Classifier model, we use these keypoints to calculate the angles between limbs and compare it against benchmarks to identify if the person has an appropritate posture for an exercise. Apart from posture correction, these keypoints are also used to count the number of reps correctly performed for the relevant workout. Additionally, constant feedback is provided regarding the form for the workout being performed.
+2. Once the workout has been identified by our Classifier model, we use these keypoints to calculate the angles between limbs and compare it against benchmarks to identify if the person has an appropritate posture for an exercise. Apart from posture correction, these keypoints are also used to count the number of reps correctly performed for the relevant workout. Additionally, constant feedback is provided regarding the form for the workout being performed.
 	
 
 The following image shows the keypoints (also called landmarks) provided by the Pose Landmark Model from MediaPipe:
