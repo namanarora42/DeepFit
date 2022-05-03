@@ -4,6 +4,16 @@
 
 Deepfit can be used to track your body movements throughout a workout. It will help correct for posture, keep track of your reps and make you sure you get fit the right way.
 
+# Quick Start
+
+To get started with your own predictions right away, you can use ```DeepFitClassifier.py```  
+
+The classifier should use the TFLite model packaged as deepfit_classifier_v3.tflite.  
+
+The only input required is an array of size 36, which denotes the X coordinates and Y coordinates of 18 keypoints. 
+
+See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example. 
+
 # Wrapper
 
 We have implemented a wrapper around the Pose Detection API from Google's AI framework, MediaPipe, to achieve two tasks:
@@ -19,15 +29,7 @@ The following image shows the keypoints (also called landmarks) provided by the 
 ![keypoints](assets/mediapipe_keypoints.png)
 
 
-# Quick Start
 
-To get started with your own predictions right away, you can use ```DeepFitClassifier.py```  
-
-The classifier should use the TFLite model packaged as deepfit_classifier_v3.tflite.  
-
-The only input required is an array of size 36, which denotes the X coordinates and Y coordinates of 18 keypoints. 
-
-See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example. 
 
 # Classifier
 
