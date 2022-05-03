@@ -161,3 +161,8 @@ https://doi.org/10.1051/matecconf/201713205016
 - MMFit Dataset  
 https://github.com/KDMStromback/mm-fit  
 https://doi.org/10.1145/3432701 
+- MediaPipe Documentation   
+https://google.github.io/mediapipe/getting_started/python_framework.html
+- Motion tracking with MediaPipe   
+https://developers.googleblog.com/2020/08/instant-motion-tracking-with-mediapipe.html
+
