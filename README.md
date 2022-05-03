@@ -156,6 +156,8 @@ https://arxiv.org/abs/1602.00134
 https://github.com/CMU-Perceptual-Computing-Lab/openpose 
 - MediaPipe  
 https://google.github.io/mediapipe/
+- TensorFlow Pose Estimation  
+https://www.tensorflow.org/lite/examples/pose_estimation/overview  
 - 2D Keypoints based Pose Classifier  
 https://github.com/tringn/2D-Keypoints-based-Pose-Classifier 
 - Classification of a two-dimensional pose using a human skeleton  
