@@ -14,6 +14,10 @@ The only input required is an array of size 36, which denotes the X coordinates 
 
 See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example. 
 
+# Demo
+
+![demo](assets/demo.gif)
+
 # Wrapper
 
 We have implemented a wrapper around the Pose Detection API from Google's AI framework, MediaPipe, to achieve two tasks:
