@@ -166,14 +166,11 @@ Here's an example pose recognized, normalized, and classified.
 
 
 # References
+A big thanks to [@akshaybahadur21](https://github.com/akshaybahadur21) and [@tringn](https://github.com/tringn) for sparking inspiration for this project ❣  
 - Hand Keypoint Detection in Single Images using Multiview Bootstrapping  
 https://arxiv.org/abs/1704.07809
 - Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields  
 https://arxiv.org/pdf/1611.08050.pdf
-- Convolutional Pose Machines  
-https://arxiv.org/abs/1602.00134
-- OpenPose  
-https://github.com/CMU-Perceptual-Computing-Lab/openpose 
 - MediaPipe  
 https://google.github.io/mediapipe/
 - TensorFlow Pose Estimation  
