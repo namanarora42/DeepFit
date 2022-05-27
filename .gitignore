@@ -5,3 +5,4 @@ mmfit-guide/*
 __pycache__/DeepFitClassifier.cpython-36.pyc
 deepfit/
 *.pyc
+**/venv*/

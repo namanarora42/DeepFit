@@ -5,14 +5,18 @@
 Deepfit tracks your body movements throughout a workout. It will help correct for posture, keep track of your reps and make sure you get fit the right way.
 
 # Quick Start
+In a new environment, run `pip install -r requirments.txt`
+## Deployment 
+To run your own version of DeepFit, use `python3 deepfit_integration.py`
+## Development 
 
-To get started with your own predictions right away, you can use ```DeepFitClassifier.py```  
+To get started with your own predictions, you can use ```DeepFitClassifier.py```  
 
 The classifier should use the TFLite model packaged as deepfit_classifier_v3.tflite.  
 
 The input required is an array of size 36, which denotes the X coordinates and Y coordinates of 18 keypoints. 
 
-See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example. 
+See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example.  
 
 # Demo
 
