@@ -18,16 +18,21 @@ See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example.
 
 ![demo](assets/demo.gif)
 
-# Wrapper
+# Methodology
 
-We have implemented a wrapper around the Pose Detection API from Google's AI framework, MediaPipe, to achieve two tasks:
+We have implemented a wrapper around the Pose Detection API from Google's AI framework, MediaPipe, to achieve three tasks:
 
-1. To detect the coordinates of 18 keypoints (out of a total of 33) on the body of a single subject in frame. These keypoints are then fed into our Classifier model, which predicts the workout being performed based on these coordinates. 
+## 1. Keypoint Detection 
+The pre-trained MediaPipe landmark model in use is a Convolutional Neural Network and is trained with an input layer of size `[1,256,256,3]`, which is accepted as incoming video feed from the webcam (256 x 256 pixels’ RGB values). The result received from the output layer is of shape `[33, 5]`. It translates to the 33 keypoints being detected by the model. The 5 additional parameters in the output map to the X, Y, and Z coordinates in the image (or video frame) and two factors for visibility and presence. 
 	
-2. Once the workout has been identified by our Classifier model, we use these keypoints to calculate the angles between limbs and compare it against benchmarks to identify if the person has an appropritate posture for an exercise. Apart from posture correction, these keypoints are also used to count the number of reps correctly performed for the relevant workout. Additionally, constant feedback is provided regarding the form for the workout being performed.
+## 2. Pose Classification  
+18 of the 33 detected keypoints are used to train a pose classifier. The model tells us what workout is being performed, which leads us to task 3. 
+
+## 3. Pose Correction
+Once the workout has been identified by our Classifier model, we use these keypoints to calculate the angles between limbs and compare it against benchmarks to identify if the person has an appropritate posture for an exercise. Apart from posture correction, these keypoints are also used to count the number of reps correctly performed for the workout. 
 	
 
-The following image shows the keypoints (also called landmarks) provided by the Pose Landmark Model from MediaPipe:
+The following image shows the keypoints provided by the Pose Landmark Model from MediaPipe:
 
 
 ![keypoints](assets/mediapipe_keypoints.png)
@@ -35,7 +40,7 @@ The following image shows the keypoints (also called landmarks) provided by the 
 
 
 
-# Classifier
+# Implementation
 
 ## Dataset
 
@@ -44,8 +49,13 @@ The following image shows the keypoints (also called landmarks) provided by the 
 - We make use of the 2D pose estimates present in MMFit.
 - The data is split into train, test, and valdiation sets.
 - Since the dataset is large, it is not part of the repo. It can be downloaded [here](https://s3.eu-west-2.amazonaws.com/vradu.uk/mm-fit.zip).
+- The dataset originally contains around 1.1 million frames worth of data (~800 minutes of video), which was filtered out for training the model. We only retained the labeled frames and removed all the noise for our prototype. This left us with a total of 375,753 frames. 
 
-## Training
+## Input Normalization
+
+Since we plan to work with a live video feed, input normalization becomes a crucial component of the architecture. The model should be agnostic about how far away a person is standing from the camera, the height of the person, or the camera angle. To counter all these variables, we use a technique outlined in the [MATEC paper](https://doi.org/10.1051/matecconf/201713205016) to normalize the keypoints around the center of gravity. For this, first, the length of the body is calculated using the distances between certain detected keypoints. 
+
+## Model Architecture
 
 - The input shape is of (36,). These denote the X and Y coordinates of the below 18 keypoints:  
 ```
@@ -147,6 +157,12 @@ Below is a training summary:
 
 - Loss: 0.1938
 - Accuracy: 0.9588
+
+# Example
+
+Here's an example pose recognized, normalized, and classified. 
+
+![sample](/assets/input_norm.png)
 
 
 # References
