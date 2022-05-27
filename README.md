@@ -2,7 +2,7 @@
 
 **Your digital personal trainer**
 
-Deepfit can be used to track your body movements throughout a workout. It will help correct for posture, keep track of your reps and make you sure you get fit the right way.
+Deepfit tracks your body movements throughout a workout. It will help correct for posture, keep track of your reps and make sure you get fit the right way.
 
 # Quick Start
 
@@ -10,7 +10,7 @@ To get started with your own predictions right away, you can use ```DeepFitClass
 
 The classifier should use the TFLite model packaged as deepfit_classifier_v3.tflite.  
 
-The only input required is an array of size 36, which denotes the X coordinates and Y coordinates of 18 keypoints. 
+The input required is an array of size 36, which denotes the X coordinates and Y coordinates of 18 keypoints. 
 
 See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example. 
 
@@ -166,14 +166,11 @@ Here's an example pose recognized, normalized, and classified.
 
 
 # References
+A big thanks to [@akshaybahadur21](https://github.com/akshaybahadur21) and [@tringn](https://github.com/tringn) for sparking inspiration for this project ❣  
 - Hand Keypoint Detection in Single Images using Multiview Bootstrapping  
 https://arxiv.org/abs/1704.07809
 - Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields  
 https://arxiv.org/pdf/1611.08050.pdf
-- Convolutional Pose Machines  
-https://arxiv.org/abs/1602.00134
-- OpenPose  
-https://github.com/CMU-Perceptual-Computing-Lab/openpose 
 - MediaPipe  
 https://google.github.io/mediapipe/
 - TensorFlow Pose Estimation  
