@@ -20,6 +20,8 @@ See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example.
 
 # Methodology
 
+![pipeline](assets/deepfit-pipeline.png)
+
 We have implemented a wrapper around the Pose Detection API from Google's AI framework, MediaPipe, to achieve three tasks:
 
 ## 1. Keypoint Detection 
