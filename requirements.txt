@@ -103,3 +103,4 @@ Werkzeug @ file:///opt/conda/conda-bld/werkzeug_1645628268370/work
 wrapt==1.12.1
 yarl @ file:///tmp/build/80754af9/yarl_1606939915466/work
 zipp @ file:///tmp/build/80754af9/zipp_1633618647012/work
+mediapipe
