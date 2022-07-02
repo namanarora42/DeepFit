@@ -20,7 +20,12 @@ See [Inference Notebook](/DeepFitClassifierInference.ipynb) for an example.
 
 # Demo
 
-![demo](assets/demo.gif)
+
+https://user-images.githubusercontent.com/85018020/176982004-42e5c56c-670d-4d7c-88be-0a98e40304ac.mp4
+
+https://user-images.githubusercontent.com/85018020/176982012-a155a14b-ca2c-4d69-8f98-15feb27e06e7.mp4
+
+
 
 # Methodology
 
